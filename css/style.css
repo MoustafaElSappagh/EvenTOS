@@ -1,0 +1,96 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+/* variables */
+:root {
+    --main-color: hsl(345, 90%, 60%);
+
+    /* text colors */
+    --text-dark-gray: hsl(0, 0%, 25%);
+    --text-x-dark-gray: hsl(0, 0%, 10%);
+    --text-black: hsl(0, 0%, 05);
+
+    /* bg colors */
+    --bg-light-yellow: hsl(42, 26%, 77%);
+    --bg-x-light-yellow: hsl(42, 40%, 87%);
+    --bg-green: hsl(167, 57%, 52%);
+    --bg-purple: hsl(253, 79%, 77%);
+
+    /* border colors */
+    --border-dark: hsla(0, 0%, 0%, 0.1);
+    --border-x-dark: hsla(0, 0%, 0%, 0.7);
+
+    /* font family */
+    --ff-carter-one: 'Carter One',system-ui;
+
+    /* font size */
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 22px;
+    --fs-2xl: 28px;
+    --fs-3xl: clamp(27px, 4vw, 50px);
+    --fs-4xl: clamp(35px, 7vw, 90px);
+    --fs-body: var(--fs-md);
+
+    /* padding */
+    --section-py: 80px;
+}
+
+/* base */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::after,
+::before {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: var(--fs-body);
+    background-color: var(--bg-x-light-yellow);
+    color: var(--text-dark-gray);
+    line-height: 1.5;
+    --webkit-text-size-adjust: 100%;
+    --webkit-tap-highlight-color: transparent;
+}
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.5;
+    color: var(--text-x-dark-gray);
+}
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+ul {
+    list-style: none;
+}
+p + p {
+    margin-top: 15px;
+}
+button {
+    cursor: pointer;
+}
+::selection {
+    color: var(--text-black);
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--bg-x-light-yellow);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--bg-light-yellow);
+}
