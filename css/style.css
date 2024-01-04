@@ -94,3 +94,57 @@ button {
 ::-webkit-scrollbar-thumb {
     background-color: var(--bg-light-yellow);
 }
+
+/* page wrapper */
+.page-wrapper {
+    overflow: hidden;
+}
+
+/* container */
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* header */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 18px 0;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--text-x-dark-gray);
+}
+.header-logo span {
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+.header-toggler {
+    display: none;
+}
+.header-menu li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.header-menu a {
+    display: block;
+    color: var(--text-x-dark-gray);
+    transition: color 0.3s ease;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.header-menu a:hover {
+    color: var(--main-color);
+}
