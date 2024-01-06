@@ -34,7 +34,7 @@
     --fs-body: var(--fs-md);
 
     /* padding */
-    --section-py: 80px;
+    --section-py: 100px;
 }
 
 /* base */
@@ -258,7 +258,6 @@ button {
 /* about */
 .about {
     padding: var(--section-py) 0;
-    margin-bottom: 13px;
 }
 .about-content {
     display: grid;
@@ -425,4 +424,75 @@ button {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--border-x-dark);
+}
+
+/* pricing */
+.pricing {
+    padding: var(--section-py) 0;
+}
+.pricing-cards {
+    max-width: 700px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    align-items: start;
+}
+.pricing-card {
+    position: relative;
+}
+.pricing-card:nth-child(2) {
+    margin-top: 80px;
+}
+.pricing-card .decor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: -1;
+    transform: translate(-20%, -20%);
+}
+.pricing-card:nth-child(1) .decor {
+    background-color: var(--bg-purple);
+}
+.pricing-card:nth-child(2) .decor {
+    background-color: var(--bg-green);
+}
+.pricing-card .inner {
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-x-dark);
+}
+.pricing-card .title {
+    text-transform: capitalize;
+    font-size: var(--fs-2xl);
+    font-weight: 500;
+    color: var(--text-x-dark-gray);
+}
+.pricing-card ul {
+    margin-top: 30px;
+}
+.pricing-card li {
+    position: relative;
+    padding-left: 30px;
+}
+.pricing-card li+li {
+    margin-top: 8px;
+}
+.pricing-card li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 14px;
+}
+.pricing-card .price {
+    font-size: var(--fs-2xl);
+    color: var(--text-x-dark-gray);
+    font-weight: bold;
+    margin-top: 30px;
+}
+.pricing-card .btn {
+    margin-top: 20px;
 }
