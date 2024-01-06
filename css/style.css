@@ -409,3 +409,20 @@ button {
     max-width: 50px;
     border-radius: 50%;
 }
+
+/* sponsers */
+.sponsers {
+    padding: var(--section-py) 0;
+}
+.sponsers-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.sponsers-item {
+    padding: 40px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-x-dark);
+}
