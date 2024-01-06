@@ -258,6 +258,7 @@ button {
 /* about */
 .about {
     padding: var(--section-py) 0;
+    margin-bottom: 13px;
 }
 .about-content {
     display: grid;
@@ -342,4 +343,69 @@ button {
 .performers-job {
     text-transform: capitalize;
     margin-top: 4px;
+}
+
+/* schedule */
+.schedule {
+    padding: var(--section-py) 0;
+}
+.schedule-tabs {
+    text-align: center;
+}
+.schedule-tab {
+    background-color: transparent;
+    border: 1px solid var(--border-x-dark);
+    border-radius: 5px;
+    padding: 5px 30px;
+    color: var(--text-black);
+    text-transform: capitalize;
+    margin: 0 5px 10px;
+    font-size: var(--fs-body);
+    font-weight: 500;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+.schedule-tab.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.schedule-tab span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.schedule-table {
+    border-collapse: collapse;
+    width: 100%;
+    display: none;
+}
+.schedule-table.active {
+    display: table;
+    animation: schedule-table 0.5s ease;
+}
+@keyframes schedule-table {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.schedule-table tr:nth-child(even) {
+    background-color: var(--bg-light-yellow);
+}
+.schedule-table td,
+.schedule-table th {
+    padding: 20px;
+    text-align: left;
+    text-transform: capitalize;
+}
+.schedule-table span {
+    display: inline-block;
+}
+.schedule-table img {
+    max-width: 50px;
+    border-radius: 50%;
 }
