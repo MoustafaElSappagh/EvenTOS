@@ -257,7 +257,7 @@ button {
 
 /* about */
 .about {
-    padding: var(--section-py);
+    padding: var(--section-py) 0;
 }
 .about-content {
     display: grid;
@@ -296,4 +296,50 @@ button {
 }
 .about-btn {
     margin-top: 30px;
+}
+
+/* performers */
+.performers {
+    padding: var(--section-py) 0;
+}
+.performers-items {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 clamp(30px, 15vh, 200px);
+    align-items: start;
+}
+.performers-item {
+    position: relative;
+}
+.performers-item:nth-child(even) {
+    margin-top: 200px;
+}
+.performers-info {
+    padding: 15px 20px;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+}
+.performers-backdrop {
+    background-color: var(--bg-x-light-yellow);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.performers-name {
+    color: var(--text-x-dark-gray);
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: var(--fs-2xl);
+}
+.performers-job {
+    text-transform: capitalize;
+    margin-top: 4px;
 }
