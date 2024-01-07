@@ -1,3 +1,31 @@
+
+
+//header menu
+
+function headerMenu() {
+    let toggler = document.querySelector(".js-header-toggler")
+    let menu = document.querySelector(".js-header-menu")
+    let items = menu.querySelectorAll("li")
+
+    let menuToggle = () => {
+        menu.classList.toggle("open");
+        toggler.classList.toggle("active");
+    }
+    toggler.addEventListener("click", menuToggle);
+
+    items.forEach((item) => {
+        item.querySelector("a").addEventListener("click", () => {
+            if(window.innerWidth <= 991) {
+                menuToggle();
+            }
+        });
+    });
+};
+
+headerMenu();
+
+
+
 // schedule tabs
 
 function scheduleTabs() {
